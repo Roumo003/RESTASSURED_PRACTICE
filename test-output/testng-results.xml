@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-13T09:18:32 IST" name="Default suite" finished-at="2025-08-13T09:18:34 IST" duration-ms="1949">
+  <suite started-at="2025-08-14T09:20:03 IST" name="Default suite" finished-at="2025-08-14T09:20:05 IST" duration-ms="2595">
     <groups>
     </groups>
-    <test started-at="2025-08-13T09:18:32 IST" name="Default test" finished-at="2025-08-13T09:18:34 IST" duration-ms="1949">
+    <test started-at="2025-08-14T09:20:03 IST" name="Default test" finished-at="2025-08-14T09:20:05 IST" duration-ms="2595">
       <class name="RestAssured_Practice.GET_Request">
-        <test-method signature="test_1()[pri:0, instance:RestAssured_Practice.GET_Request@6f46426d]" started-at="2025-08-13T09:18:32 IST" name="test_1" finished-at="2025-08-13T09:18:34 IST" duration-ms="1905" status="PASS">
+        <test-method signature="test_1()[pri:0, instance:RestAssured_Practice.GET_Request@73700b80]" started-at="2025-08-14T09:20:03 IST" name="test_1" finished-at="2025-08-14T09:20:04 IST" duration-ms="1613" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1 -->
+        <test-method signature="test_2()[pri:0, instance:RestAssured_Practice.GET_Request@73700b80]" started-at="2025-08-14T09:20:04 IST" name="test_2" finished-at="2025-08-14T09:20:05 IST" duration-ms="931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_2 -->
       </class> <!-- RestAssured_Practice.GET_Request -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
