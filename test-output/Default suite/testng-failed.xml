@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssured_Practice.POST_Request">
+      <class name="RestAssured_Practice.TestOnLocalHostApi">
         <methods>
-          <include name="Test_1"/>
+          <include name="Put_Request_Test"/>
         </methods>
-      </class> <!-- RestAssured_Practice.POST_Request -->
+      </class> <!-- RestAssured_Practice.TestOnLocalHostApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
