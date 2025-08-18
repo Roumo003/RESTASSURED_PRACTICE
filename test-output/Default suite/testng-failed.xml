@@ -5,7 +5,7 @@
     <classes>
       <class name="RestAssured_Practice.TestOnLocalHostApi">
         <methods>
-          <include name="Put_Request_Test"/>
+          <include name="Delete_Request_Test"/>
         </methods>
       </class> <!-- RestAssured_Practice.TestOnLocalHostApi -->
     </classes>

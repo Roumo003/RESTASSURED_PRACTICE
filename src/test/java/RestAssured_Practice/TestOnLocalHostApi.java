@@ -1,5 +1,6 @@
 package RestAssured_Practice;
 import org.testng.Assert;
+import com.google.gson.Gson;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -8,8 +9,13 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
+
+import java.util.List;
+import java.util.Map;
+
 import io.restassured.response.Response;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 /* The code in this manner 
@@ -25,13 +31,14 @@ import org.json.simple.JSONObject;
  * Function 4 - Delete the last input data*/
 
 public class TestOnLocalHostApi {
-	//@Test
+	String Ragav_ID_Global = "";
+	@Test(priority = 0)
 	public void Get_Request_Test() {
 		baseURI = "http://localhost:3000";
 		given().get("/users").
 		then().statusCode(200).log().all();
 	}
-//	@Test
+	@Test(priority = 1)
 	public void Post_Request_Test() {
 		baseURI = "http://localhost:3000";
 		JSONObject json = new JSONObject();
@@ -44,26 +51,43 @@ public class TestOnLocalHostApi {
 		when().post("/users").
 		then().statusCode(201).log().all();
 	}
-	@Test
+	  public static void main(String[] args) {
+	        
+	    }
+	@Test (priority = 2)
 	public void Put_Request_Test() {
 		baseURI = "http://localhost:3000";
 	    Response response = RestAssured.get("/users");
 	    String body = response.getBody().asString();
-//		given().get("/users").
-//		System.out.println("The response after post is "+response.toString());
-		System.out.println("Response Body:");
-        System.out.println(response.getBody().asString());
-        System.out.println(body);
-//		JSONObject json = new JSONObject();
-//		json.put("firstName" ,"Raghav");
-//		json.put("lastName" ,"Dayal");
-//		json.put("SubjectId" ,"2");
-//		given().contentType(ContentType.JSON).accept(ContentType.JSON)
-//		.body(json.toJSONString()).
-//		when().put("/users/658b").
-//		then().statusCode(200).log().all();
+	    String jsonArray = response.getBody().asString();;
+	    String raghav_Id = "" ;
+
+        Gson gson = new Gson();
+        people[] people = gson.fromJson(jsonArray, people[].class);
+        
+        System.out.println("The array is" + people);
+
+        for (people p : people) {
+           // System.out.println(p.firstName + " is " + p.lastName + " Subject" + p.SubjectId + " id" + p.id);
+        	
+        	if(p.firstName.equalsIgnoreCase("Raghav")&& p.lastName.equalsIgnoreCase("Dayal"))
+        	{
+        		raghav_Id = p.id;
+        		System.out.println(raghav_Id);
+        		Ragav_ID_Global = raghav_Id;
+        	}
+        }
+		JSONObject json = new JSONObject();
+		json.put("firstName" ,"Raghav");
+		json.put("lastName" ,"Dayal");
+		json.put("SubjectId" ,"2");
+		given().contentType(ContentType.JSON).accept(ContentType.JSON)
+		.body(json.toJSONString()).
+		when().put("/users/"+Ragav_ID_Global).
+		then().statusCode(200).log().all();
+        System.out.println("The value of global id is"+Ragav_ID_Global);
 	}
-//	@Test
+	@Test(priority = 3)
 	public void Delete_Request_Test() {
 		baseURI = "http://localhost:3000";
 
@@ -71,8 +95,10 @@ public class TestOnLocalHostApi {
 //		.body(json.toJSONString()).
 //		when().put("/users/7e87").
 //		then().statusCode(200).log().all();
+		System.out.println("The global uri is /users/"+Ragav_ID_Global);
 		
-		when().delete("/users/658b").then().statusCode(200);
+	when().delete("/users/"+Ragav_ID_Global).then().statusCode(200);
+   //	when().delete("/users/1f29").then().statusCode(200);
 	}
 	
 	

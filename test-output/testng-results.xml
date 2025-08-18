@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-16T01:49:38 IST" name="Default suite" finished-at="2025-08-16T01:49:40 IST" duration-ms="1462">
+  <suite started-at="2025-08-18T21:08:02 IST" name="Default suite" finished-at="2025-08-18T21:08:04 IST" duration-ms="1640">
     <groups>
     </groups>
-    <test started-at="2025-08-16T01:49:38 IST" name="Default test" finished-at="2025-08-16T01:49:40 IST" duration-ms="1462">
+    <test started-at="2025-08-18T21:08:02 IST" name="Default test" finished-at="2025-08-18T21:08:04 IST" duration-ms="1640">
       <class name="RestAssured_Practice.TestOnLocalHostApi">
-        <test-method signature="Put_Request_Test()[pri:0, instance:RestAssured_Practice.TestOnLocalHostApi@5403f35f]" started-at="2025-08-16T01:49:39 IST" name="Put_Request_Test" finished-at="2025-08-16T01:49:40 IST" duration-ms="1417" status="PASS">
+        <test-method signature="Get_Request_Test()[pri:0, instance:RestAssured_Practice.TestOnLocalHostApi@63a12c68]" started-at="2025-08-18T21:08:02 IST" name="Get_Request_Test" finished-at="2025-08-18T21:08:04 IST" duration-ms="1449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Get_Request_Test -->
+        <test-method signature="Post_Request_Test()[pri:1, instance:RestAssured_Practice.TestOnLocalHostApi@63a12c68]" started-at="2025-08-18T21:08:04 IST" name="Post_Request_Test" finished-at="2025-08-18T21:08:04 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Post_Request_Test -->
+        <test-method signature="Put_Request_Test()[pri:2, instance:RestAssured_Practice.TestOnLocalHostApi@63a12c68]" started-at="2025-08-18T21:08:04 IST" name="Put_Request_Test" finished-at="2025-08-18T21:08:04 IST" duration-ms="78" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Put_Request_Test -->
+        <test-method signature="Delete_Request_Test()[pri:3, instance:RestAssured_Practice.TestOnLocalHostApi@63a12c68]" started-at="2025-08-18T21:08:04 IST" name="Delete_Request_Test" finished-at="2025-08-18T21:08:04 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Delete_Request_Test -->
       </class> <!-- RestAssured_Practice.TestOnLocalHostApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
